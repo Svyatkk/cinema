@@ -12,6 +12,7 @@ export default function Nav() {
                     <div>
                         <img src="src\Images\image.png" alt="" />
 
+
                     </div>
 
                     <div className='logo'>
@@ -28,12 +29,31 @@ export default function Nav() {
 
                     <div >
                         Львів
-                        <span>&#9650;</span>
+
+                    </div>
+                    <div className='strelka'>
+                        <img src="src\Images\strelkaVnyz.png" alt="" />
                     </div>
 
 
-                    <div>
-                        Увійти
+
+
+
+                    <div className='profileLogin'>
+
+
+
+                        <a
+                            onClick={e => {
+                                e.preventDefault()
+
+
+                            }}
+                            href="#">Увійти</a>
+
+                        <div className='profileIcon'>
+                            <img src="src\Images\nd2m6os0tmc9env4gc8jh3er0j.png" alt="" />
+                        </div>
                     </div>
 
                 </div>

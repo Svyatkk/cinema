@@ -6,10 +6,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+
 }
 
 nav>div:first-child {
-    border: 1px solid white;
     height: 100%;
     display: flex;
 
@@ -20,7 +22,6 @@ nav>div:first-child {
 nav>div:first-child img {
     width: 60px;
     height: 100%;
-    border: 1px solid white;
     margin-left: 5px;
 
 
@@ -33,17 +34,17 @@ nav>div:first-child img {
     border-radius: 25px;
 }
 
+
+
 nav>div:nth-child(2) {
-    border: 1px solid white;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .imaxBlock {
-    border: 1px solid white;
-    height: 70%;
+    height: 50%;
 
 
 
@@ -58,17 +59,100 @@ nav>div:nth-child(2) {
 nav>div:nth-child(2)>div:nth-child(2) {
     color: white;
     font-weight: bold;
+    font-size: 0.7em;
+    border-left: 2px solid gray;
+    padding-left: 15px;
+
+
+
+    display: flex;
+    height: 70%;
+    align-items: center;
 }
 
 nav>div:nth-child(2) span {
-    border: 1px solid white;
 
 
+    transform: rotate(90deg);
     background-color: gray;
     border-radius: 50%;
     height: 30px;
     width: 34px;
 
+
+
+}
+
+.strelka {
+    width: auto;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(58, 58, 58);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 30px;
+    justify-content: center;
+}
+
+.strelka img {
+    padding-top: 3px;
+
+
+
+
+    width: 26px;
+    height: 20px;
+}
+
+.strelka:hover {
+    background-color: rgb(137, 137, 137);
+    transition: 0.5s;
+}
+
+.profileLogin {
+    border-left: 2px solid gray;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.profileLogin a {
+    color: white;
+    font-size: 0.7em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profileIcon {
+    width: auto;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(58, 58, 58);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    margin-right: 20px;
+
+}
+
+.profileIcon img {
+    width: 20px;
+    height: 20px;
+}
+
+.profileIcon:hover {
+    background-color: red;
+    transition: 0.5s;
 
 
 }
