@@ -1,3 +1,9 @@
+import './Main.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import BlockFilm from '../BlockFilm/BlockFilm';
+import 'swiper/css';
+
+
 export const films = [
     {
         title: "Всі відтінки спокуси",
@@ -73,17 +79,25 @@ export const films = [
 
 
 
-
 export default function Main() {
 
+
+
     return (
-        <>
-            <main>
-
-
-
-            </main>
-
-        </>
+        <main>
+            <Swiper
+                spaceBetween={10}
+                slidesPerView={4.5}
+                grabCursor={true}
+                loop={false}
+                className="mySwiper"
+            >
+                {films.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <BlockFilm film={item} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </main>
     )
 }

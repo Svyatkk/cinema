@@ -1,0 +1,23 @@
+main {
+    padding: 40px 20px;
+    background-color: #000;
+    /* Чорний фон як у кінотеатрі */
+}
+
+.mySwiper {
+    width: 100%;
+    height: auto;
+}
+
+.blockFilm {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    height: 450px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
