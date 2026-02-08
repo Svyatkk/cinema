@@ -71,18 +71,24 @@ export const films = [
     }
 ];
 
+export default function BlockFilm() {
 
 
 
-export default function Main() {
+
 
     return (
         <>
-            <main>
 
 
 
-            </main>
+            <div className="blockFilm">
+
+
+
+
+            </div>
+
 
         </>
     )
