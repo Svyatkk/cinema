@@ -1,17 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import './BlockFilm.css'
 
-
-
 export default function BlockFilm({ film }) {
+    const navigate = useNavigate()
+
     return (
-        <>
-            <div className="blockFilm">
-                <h3>{film.title}</h3>
-
-
-                <p>Рік: {film.year}</p>
-                <p>Жанр: {film.genre.join(", ")}</p>
-            </div>
-        </>
+        <div
+            className="blockFilm"
+            onClick={() => navigate(`/film/${film.id}`)}
+        >
+            <h1>{film.title}</h1>
+        </div>
     )
 }

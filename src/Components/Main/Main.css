@@ -1,7 +1,8 @@
 main {
     padding: 40px 20px;
     background-color: #000;
-    /* Чорний фон як у кінотеатрі */
+    height: auto;
+
 }
 
 .mySwiper {

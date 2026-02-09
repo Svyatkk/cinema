@@ -1,6 +1,7 @@
 .blockFilm {
-    border: 1px solid white;
-    width: 200px;
-    height: 500px;
-
+    width: 100% !important;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
