@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export default function FilmPage() {
     const { id } = useParams()
     const [film, setFilm] = useState(null)
 
+    const naviagate = useNavigate()
 
 
     useEffect(() => {
@@ -17,10 +18,20 @@ export default function FilmPage() {
     if (!film) return <p>Завантаження...</p>
 
 
+
     return (
         <div>
             <h1>{film.title}</h1>
             <p>ID: {id}</p>
+
+            <button
+                onClick={() => {
+
+
+
+                    naviagate('/')
+                }}
+            >Back</button>
         </div>
     )
 }

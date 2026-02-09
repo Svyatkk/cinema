@@ -9,6 +9,8 @@ export default function BlockFilm({ film }) {
             className="blockFilm"
             onClick={() => navigate(`/film/${film.id}`)}
         >
+
+
             <h1>{film.title}</h1>
         </div>
     )

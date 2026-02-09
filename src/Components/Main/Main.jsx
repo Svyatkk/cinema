@@ -9,13 +9,15 @@ export default function Main() {
 
 
 
-
     useEffect(() => {
         fetch('http://localhost:3000/films')
             .then(res => res.json())
             .then(data => setFilms(data))
             .catch(err => console.error(err))
     }, [])
+
+
+
 
     return (
         <main>
