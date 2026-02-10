@@ -12,6 +12,10 @@ app.get('/films', (req, res) => {
     res.json(films)
 })
 
+
+
+
+
 app.get('/films/:id', (req, res) => {
     const film = films.find(f => f.id === Number(req.params.id))
     res.json(film)

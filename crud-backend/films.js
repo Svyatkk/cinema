@@ -13,7 +13,9 @@ export const films = [
         studio: "Solar Media Entertainment",
         cast: ["Володимир Дантес", "Олена Лавренюк", "Даніель Салем", "Олена Хохлаткіна"],
         inclusiveAdaptation: true,
-        premiere: true
+        premiere: true,
+        filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg"
+
 
 
     },

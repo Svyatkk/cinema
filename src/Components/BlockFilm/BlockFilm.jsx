@@ -2,25 +2,29 @@ import { useNavigate } from 'react-router-dom'
 import './BlockFilm.css'
 import { useState } from 'react'
 
+
+
 export default function BlockFilm({ film }) {
     const navigate = useNavigate()
 
 
 
-
     return (
+
+
 
         <>
             <div
                 className="blockFilm"
-                onClick={() => navigate(`/film/${film.id}`)}
-            >
+                style={{ backgroundImage: `url(${film.filmPosterHref})` }}            >
 
                 <div className='shadow'>
                     <div>
-                        <div><span>!</span> <p>Детальніше про фільм</p></div>
-                        <div><span> &#9654;</span><p>Дивитись трейлер</p></div>
+                        <div
+                            onClick={() => navigate(`/film/${film.id}`)}
 
+                        ><span>!</span> <p>Детальніше про фільм</p></div>
+                        <div><span> &#9654;</span><p>Дивитись трейлер</p></div>
                     </div>
 
                     <div className='block-graphics'>
@@ -44,7 +48,7 @@ export default function BlockFilm({ film }) {
 
 
                 <h1>{film.title}</h1>
-            </div>
+            </div >
 
 
         </>

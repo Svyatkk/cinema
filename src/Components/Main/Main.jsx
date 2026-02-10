@@ -15,8 +15,6 @@ export default function Main() {
             .catch(err => console.error(err))
     }, [])
 
-
-
     return (
         <main>
             <Swiper
