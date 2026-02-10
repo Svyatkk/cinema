@@ -8,14 +8,12 @@ export default function Main() {
     const [films, setFilms] = useState([])
 
 
-
     useEffect(() => {
         fetch('http://localhost:3000/films')
             .then(res => res.json())
             .then(data => setFilms(data))
             .catch(err => console.error(err))
     }, [])
-
 
 
 

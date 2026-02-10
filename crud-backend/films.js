@@ -12,7 +12,10 @@ export const films = [
         production: "Україна",
         studio: "Solar Media Entertainment",
         cast: ["Володимир Дантес", "Олена Лавренюк", "Даніель Салем", "Олена Хохлаткіна"],
-        inclusiveAdaptation: true
+        inclusiveAdaptation: true,
+        premiere: true
+
+
     },
     {
         id: 2,
@@ -27,7 +30,9 @@ export const films = [
         production: "Україна",
         studio: "Pronto Film",
         cast: ["Сергій Стрельников", "Олексій Гнатковський", "Дар'я Плахтій"],
-        inclusiveAdaptation: true
+        inclusiveAdaptation: true,
+        premiere: true
+
     },
     {
         id: 3,
@@ -42,7 +47,9 @@ export const films = [
         production: "Україна, Франція, Польща",
         studio: "Bosonfilm",
         cast: ["Олександр Яцентюк", "Соломія Кирилова", "Станіслав Потяк"],
-        inclusiveAdaptation: true
+        inclusiveAdaptation: true,
+        premiere: false
+
     },
     {
         id: 4,
@@ -57,7 +64,9 @@ export const films = [
         production: "Україна",
         studio: "ForeFilms",
         cast: ["Аміл Насіров", "Раміл Насіров", "Наталія Гнітій"],
-        inclusiveAdaptation: false
+        inclusiveAdaptation: false,
+        premiere: false
+
     },
     {
         id: 5,
@@ -72,6 +81,8 @@ export const films = [
         production: "Україна",
         studio: "FILM.UA Group",
         cast: ["Тетяна Малкова", "Тарас Цимбалюк", "Павло Вишняков"],
-        inclusiveAdaptation: true
+        inclusiveAdaptation: true,
+        premiere: true
+
     }
 ];

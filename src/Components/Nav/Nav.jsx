@@ -1,8 +1,13 @@
+import { useState } from 'react'
 import './Nav.css'
 
 
 
 export default function Nav() {
+
+
+    const [ham, setHam] = useState(false)
+
 
     return (
         <>
@@ -10,15 +15,29 @@ export default function Nav() {
             <nav>
                 <div>
                     <div>
-                        <img src="src\Images\image.png" alt="" />
 
+
+                        <div
+                            onClick={(e) => {
+                                setHam(prev => !prev)
+                                e.preventDefault()
+
+                            }}
+                            className={`ham-menu ${ham ? "active" : ""}`}
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+
+                        </div>
 
                     </div>
 
                     <div className='logo'>
 
 
-
+                        <img src="src\Images\logo (2).png" alt="" />
                     </div>
 
                 </div>

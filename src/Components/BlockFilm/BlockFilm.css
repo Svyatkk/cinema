@@ -4,4 +4,113 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    margin-top: 20px;
+    transition: 0.5s;
+
+}
+
+.blockFilm:hover .shadow {
+    opacity: 1;
+    background-color: rgba(72, 72, 72, 0.75);
+    transition: 0.5s
+}
+
+
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 30px;
+    opacity: 0;
+}
+
+.shadow>div:first-child {
+    display: flex;
+    height: 200px;
+    width: 80%;
+    gap: 20px;
+
+
+
+    align-items: center;
+
+}
+
+.shadow>div:first-child>div:nth-child(2),
+.shadow>div:first-child>div:first-child {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+
+}
+
+.shadow>div:first-child>div:nth-child(2) p,
+.shadow>div:first-child>div:first-child p {
+    width: calc(100% - 80px);
+    font-weight: bold;
+}
+
+
+.shadow>div:first-child>div:nth-child(2) span,
+.shadow>div:first-child>div:first-child span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    min-width: 70px;
+    border: 1px solid white;
+    width: 70px;
+    border-radius: 10px;
+    height: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.shadow>div:first-child>div:nth-child(2) span:hover,
+.shadow>div:first-child>div:first-child span:hover {
+    background-color: red;
+
+}
+
+@media (max-width: 1630px) {
+    .shadow>div:first-child {
+        flex-direction: column;
+
+        margin-top: 20px;
+    }
+
+    .shadow>div:first-child>div:nth-child(2),
+    .shadow>div:first-child>div:first-child {
+        width: 90%;
+    }
+}
+
+.block-graphics {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+
+    flex-direction: column;
+}
+
+
+.block-graphics a {
+    text-decoration: none;
+    color: white
+}
+
+.block-show-premier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }

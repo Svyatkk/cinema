@@ -27,13 +27,74 @@ nav>div:first-child img {
 
 }
 
+
+.ham-menu {
+    height: 100%;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+
+
+
+    transition: 1 ease;
+
+}
+
+.ham-menu span {
+    height: 4px;
+    width: 70%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+
+
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+
+
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
 .logo {
-    border: 1px solid white;
     width: 104px;
     height: 100%;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+
 }
 
+.logo img {
+    width: 90% !important;
+
+
+}
 
 
 nav>div:nth-child(2) {
