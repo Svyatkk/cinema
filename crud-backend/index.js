@@ -15,25 +15,90 @@ app.use(express.json())
 app.get('/films', (req, res) => {
     res.json(films)
 })
+function removeItemOnce(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+        arr.splice(index, 1);
+    }
+    return arr;
+}
+
+
+
+app.patch('/films/:id/rate', (req, res) => {
+    const id = Number(req.params.id);
+    const { rating } = req.body;
+
+    const film = films.find(film => film.id === id);
+
+    if (film) {
+        film.rating = rating;
+        console.log(`Рейтинг оновлено: ${film.title} -> ${film.rating}`);
+
+        res.json(film);
+    } else {
+        res.status(404).json({ message: "Фільм не знайдено" });
+    }
+});
+
+app.delete('/film/delete/:id', (req, res) => {
+    const id = Number(req.params.id);
+
+    const deleteFilm = films.find(film => film.id === id);
+
+    if (deleteFilm) {
+        removeItemOnce(films, deleteFilm);
+
+        console.log(`Фільм з ID ${id} видалено`);
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(404);
+    }
+});
+
+app.post('/register', (req, res) => {
+    const user = req.body;
+
+    if (!user.name) {
+        return res.status(400).json({ message: "Ім'я обов'язкове" });
+    }
+    const newUser = {
+        id: users.length + 1,
+        name: user.name
+    }
+    users.push(user)
+
+    console.log("Додано юзера:", newUser)
+
+    res.status(201).json(newUser);
+})
 
 
 app.get('/login', (req, res) => {
-
-
     res.json(users)
-
-
-
-
 })
 
 app.get('/login/:id', (req, res) => {
+
 
     const user = users.find(user => user.id === Number(req.params.id))
     if (user) {
         res.json(user)
     } else {
-        res.status(404).json({ message: "User not found" })
+
+
+        const newUser = {
+            name: "Guest",
+            id: Number(req.params.id)
+        }
+
+        users.push(newUser)
+
+
+        console.log('Юзера створено!')
+        res.status(201).json(newUser);
+
+
     }
 })
 

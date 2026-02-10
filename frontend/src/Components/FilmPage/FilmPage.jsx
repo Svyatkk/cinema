@@ -5,7 +5,13 @@ export default function FilmPage() {
     const { id } = useParams()
     const [film, setFilm] = useState(null)
 
+    const [rate, setRate] = useState(null)
+
+
+
     const naviagate = useNavigate()
+
+
 
 
     useEffect(() => {
@@ -16,6 +22,7 @@ export default function FilmPage() {
     }, [id])
 
     if (!film) return <p>Завантаження...</p>
+
 
 
 
@@ -32,6 +39,46 @@ export default function FilmPage() {
                     naviagate('/')
                 }}
             >Back</button>
+
+
+
+            <label htmlFor=""><input
+                onChange={(e) => {
+                    setRate(e.target.value)
+
+                }}
+                className="" type="text" />
+            </label>
+
+
+
+            {rate > 5 ? "👍" : "👎"}
+
+
+
+            <button
+                onClick={() => {
+
+                    fetch(`http://localhost:3000/films/${id}/rate`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }, body: JSON.stringify({ rating: rate })
+                    })
+                        .then(res => {
+                            if (res.ok) {
+                                console.log("Успіх!");
+                                return res.json();
+                            }
+                        })
+                        .then(updatedFilm => {
+
+                            setFilm(updatedFilm);
+                        })
+                        .catch(err => console.error("Помилка:", err));
+                }}
+            >Установити рейтинг</button>
+
         </div>
     )
 }

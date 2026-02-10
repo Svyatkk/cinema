@@ -26,10 +26,12 @@ export default function LoginPage() {
                 onClick={() => {
                     navigate(`/login/${id}`)
                 }}
-
-
-
             >Перенаправити</button>
+
+
+
+
+
 
         </>
     )

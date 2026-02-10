@@ -3,11 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import BlockFilm from '../BlockFilm/BlockFilm'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Main() {
     const [films, setFilms] = useState([])
-
-
     useEffect(() => {
         fetch('http://localhost:3000/films')
             .then(res => res.json())

@@ -92,7 +92,7 @@ nav>div:first-child img {
 
 .logo img {
     width: 90% !important;
-
+    cursor: pointer;
 
 }
 

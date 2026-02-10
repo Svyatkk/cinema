@@ -14,7 +14,12 @@ export const films = [
         cast: ["Володимир Дантес", "Олена Лавренюк", "Даніель Салем", "Олена Хохлаткіна"],
         inclusiveAdaptation: true,
         premiere: true,
-        filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg"
+        filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg",
+        rating: 0
+
+
+
+
 
 
 
@@ -33,7 +38,9 @@ export const films = [
         studio: "Pronto Film",
         cast: ["Сергій Стрельников", "Олексій Гнатковський", "Дар'я Плахтій"],
         inclusiveAdaptation: true,
-        premiere: true
+        premiere: true,
+        rating: 0
+
 
     },
     {
@@ -50,7 +57,9 @@ export const films = [
         studio: "Bosonfilm",
         cast: ["Олександр Яцентюк", "Соломія Кирилова", "Станіслав Потяк"],
         inclusiveAdaptation: true,
-        premiere: false
+        premiere: false,
+        rating: 0
+
 
     },
     {
@@ -67,7 +76,9 @@ export const films = [
         studio: "ForeFilms",
         cast: ["Аміл Насіров", "Раміл Насіров", "Наталія Гнітій"],
         inclusiveAdaptation: false,
-        premiere: false
+        premiere: false,
+        rating: 0
+
 
     },
     {
@@ -84,7 +95,11 @@ export const films = [
         studio: "FILM.UA Group",
         cast: ["Тетяна Малкова", "Тарас Цимбалюк", "Павло Вишняков"],
         inclusiveAdaptation: true,
-        premiere: true
+        premiere: true,
+        rating: 0
+
+
+
 
     }
 ];

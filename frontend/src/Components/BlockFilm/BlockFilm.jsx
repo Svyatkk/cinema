@@ -1,22 +1,36 @@
 import { useNavigate } from 'react-router-dom'
 import './BlockFilm.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 
 export default function BlockFilm({ film }) {
     const navigate = useNavigate()
 
+    const [rating, setRating] = useState(null)
 
+
+    function deleteMovie() {
+        fetch(`http://localhost:3000/film/delete/${film.id}`, {
+            method: 'DELETE',
+        })
+            .then(res => {
+                if (res.ok) {
+                    console.log("Фільм видалено");
+                    window.location.reload();
+                }
+            })
+            .catch(err => console.log(err));
+    }
 
     return (
-
-
 
         <>
             <div
                 className="blockFilm"
                 style={{ backgroundImage: `url(${film.filmPosterHref})` }}            >
+
+
 
                 <div className='shadow'>
                     <div>
@@ -41,6 +55,19 @@ export default function BlockFilm({ film }) {
 
 
                             <a href="">Квитки у продажу</a>
+
+                            <button
+                                onClick={() => {
+                                    deleteMovie()
+
+                                }}
+                            >
+                                ❌
+                            </button>
+
+
+
+
                         </div>
                     </div>
 

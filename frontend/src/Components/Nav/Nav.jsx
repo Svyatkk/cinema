@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import './Nav.css'
-
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Nav() {
 
+    const navigate = useNavigate()
 
     const [ham, setHam] = useState(false)
 
-
     return (
         <>
-
             <nav>
                 <div>
                     <div>
@@ -34,7 +33,11 @@ export default function Nav() {
 
                     </div>
 
-                    <div className='logo'>
+                    <div
+                        onClick={() => {
+                            navigate('/')
+                        }}
+                        className='logo'>
 
 
                         <img src="src\Images\logo (2).png" alt="" />
