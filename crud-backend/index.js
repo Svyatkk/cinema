@@ -1,6 +1,10 @@
 import express from 'express'
 import cors from 'cors'
 import { films } from './films.js'
+import { users } from './users.js'
+
+
+
 
 const app = express()
 const port = 3000
@@ -13,6 +17,25 @@ app.get('/films', (req, res) => {
 })
 
 
+app.get('/login', (req, res) => {
+
+
+    res.json(users)
+
+
+
+
+})
+
+app.get('/login/:id', (req, res) => {
+
+    const user = users.find(user => user.id === Number(req.params.id))
+    if (user) {
+        res.json(user)
+    } else {
+        res.status(404).json({ message: "User not found" })
+    }
+})
 
 
 
