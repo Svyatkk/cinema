@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
 export default function ShowFavourite() {
     const [favfilms, setFavFilms] = useState([])
+
+
 
     useEffect(() => {
         fetch('http://localhost:3000/films/favourites')
@@ -12,6 +15,7 @@ export default function ShowFavourite() {
             })
             .catch(err => console.log(err))
     }, [])
+
 
 
 
@@ -26,8 +30,40 @@ export default function ShowFavourite() {
                 <div key={film.id} style={{ border: "1px solid gray", margin: "10px", padding: "10px" }}>
                     <h3>{film.title}</h3>
                     <img src={film.filmPosterHref} alt={film.title} style={{ width: "100px" }} />
+                    <button
+                        onClick={() => {
+
+
+                            fetch(`http://localhost:3000/films/${film.id}/favourite`, {
+                                method: 'PATCH'
+                            })
+                                .then(res => {
+
+                                    if (res.ok) {
+                                        res.json(film)
+
+                                        setFavFilms(fav => fav.filter(item => item.id !== film.id))
+                                    }
+                                    else {
+
+                                    }
+                                })
+                                .catch(err => console.log(err))
+
+
+                        }}
+
+
+
+
+
+
+                    >❌ </button>
+
+
                 </div>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     )
 }

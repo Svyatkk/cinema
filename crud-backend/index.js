@@ -24,12 +24,12 @@ function removeItemOnce(arr, value) {
 }
 
 
+
+
 app.get('/films/favourites', (req, res) => {
     const filmFavourites = films.filter(film => film.isFavorite === true)
 
     res.json(filmFavourites)
-
-
 })
 
 app.patch('/films/:id/favourite', (req, res) => {

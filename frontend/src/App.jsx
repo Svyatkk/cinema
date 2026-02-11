@@ -1,7 +1,7 @@
 import Nav from "./Components/Nav/Nav"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Main from "./Components/Main/Main"
-import FilmPage from "./Components/FilmPage/FilmPage"
+import FilmPage from "./Pages/FilmPage"
 import LoginPage from "./Pages/LoginPage"
 import ProfilePage from "./Pages/ProfilePag"
 import ShowFavourite from "./Pages/ShowFavourite"

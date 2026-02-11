@@ -18,6 +18,8 @@ export default function ProfilePage() {
         return <div>Завантаження...</div>
     }
 
+
+
     return (
         <div style={{ color: "white", padding: "20px" }}>
             <h1>Профіль користувача</h1>
