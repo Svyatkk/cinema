@@ -10,6 +10,7 @@ export default function BlockFilm({ film }) {
     const [rating, setRating] = useState(null)
     const [isFav, setIsFav] = useState(film.isFavorite)
 
+
     function deleteMovie() {
         fetch(`http://localhost:3000/film/delete/${film.id}`, {
             method: 'DELETE',
@@ -26,12 +27,15 @@ export default function BlockFilm({ film }) {
 
     return (
 
+
         <>
+
+
+
             <div
                 className="blockFilm"
-                style={{ backgroundImage: `url(${film.filmPosterHref})` }}            >
-
-
+                style={{ backgroundImage: `url(${film.filmPosterHref})` }}
+            >
 
                 <div className='shadow'>
                     <div>
@@ -43,18 +47,15 @@ export default function BlockFilm({ film }) {
                     </div>
 
                     <div className='block-graphics'>
-                        <a href="">                        Кінотеатр
+                        <a href="">
+                            Кінотеатр
                         </a>
-
-
                         {
                             film.premiere ? <img src="src\Images\door.png" alt="" /> : <a style={{ color: "red" }}>Сьогодні</a>
                         }
 
                         <div className='block-show-premier'>
                             <a href="" style={{ color: "red" }}>Прем'єра!</a>
-
-
                             <a href="">Квитки у продажу</a>
 
                             <button

@@ -88,3 +88,4 @@ fetch(`http://localhost:3000/films/${film.id}/favourite`, { method: 'PATCH' })
     .then(res => {
         if (res.ok) setIsFav(true) // Або toggle логіка: setIsFav(!isFav)
     })
+
