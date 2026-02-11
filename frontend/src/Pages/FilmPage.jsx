@@ -7,12 +7,7 @@ export default function FilmPage() {
 
     const [rate, setRate] = useState(null)
 
-
-
     const naviagate = useNavigate()
-
-
-
 
     useEffect(() => {
         fetch(`http://localhost:3000/films/${id}`)
@@ -22,7 +17,6 @@ export default function FilmPage() {
     }, [id])
 
     if (!film) return <p>Завантаження...</p>
-
 
 
 
@@ -51,10 +45,7 @@ export default function FilmPage() {
             </label>
 
 
-
             {rate > 5 ? "👍" : "👎"}
-
-
 
             <button
                 onClick={() => {
@@ -77,6 +68,8 @@ export default function FilmPage() {
                         })
                         .catch(err => console.error("Помилка:", err));
                 }}
+
+
             >Установити рейтинг</button>
 
         </div>

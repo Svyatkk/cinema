@@ -20,9 +20,6 @@ export const films = [
 
 
 
-
-
-
     },
     {
         id: 2,
@@ -40,7 +37,8 @@ export const films = [
         inclusiveAdaptation: true,
         premiere: true,
         rating: 0,
-        isFavorite: false
+        isFavorite: false,
+        filmPosterHref: "/images/dovbush.jpg",
 
 
     },
