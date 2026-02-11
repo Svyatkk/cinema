@@ -24,6 +24,34 @@ function removeItemOnce(arr, value) {
 }
 
 
+app.get('/films/favourites', (req, res) => {
+    const filmFavourites = films.filter(film => film.isFavorite === true)
+
+    res.json(filmFavourites)
+
+
+})
+
+app.patch('/films/:id/favourite', (req, res) => {
+
+    const id = Number(req.params.id)
+
+    const film = films.find(film => film.id === id);
+
+
+    if (film) {
+        film.isFavorite = !film.isFavorite;
+        console.log(`Фільм ${film.title} тепер favorite: ${film.isFavorite}`);
+        res.json(film)
+    }
+    else {
+
+        res.sendStatus(404)
+
+    }
+
+
+})
 
 app.patch('/films/:id/rate', (req, res) => {
     const id = Number(req.params.id);
@@ -41,6 +69,8 @@ app.patch('/films/:id/rate', (req, res) => {
     }
 });
 
+
+
 app.delete('/film/delete/:id', (req, res) => {
     const id = Number(req.params.id);
 
@@ -54,7 +84,13 @@ app.delete('/film/delete/:id', (req, res) => {
     } else {
         res.sendStatus(404);
     }
+
+
 });
+
+
+
+
 
 app.post('/register', (req, res) => {
     const user = req.body;

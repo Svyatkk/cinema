@@ -15,8 +15,8 @@ export const films = [
         inclusiveAdaptation: true,
         premiere: true,
         filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg",
-        rating: 0
-
+        rating: 0,
+        isFavorite: false
 
 
 
@@ -39,7 +39,8 @@ export const films = [
         cast: ["Сергій Стрельников", "Олексій Гнатковський", "Дар'я Плахтій"],
         inclusiveAdaptation: true,
         premiere: true,
-        rating: 0
+        rating: 0,
+        isFavorite: false
 
 
     },
@@ -59,6 +60,7 @@ export const films = [
         inclusiveAdaptation: true,
         premiere: false,
         rating: 0
+        , isFavorite: false
 
 
     },
@@ -78,7 +80,8 @@ export const films = [
         inclusiveAdaptation: false,
         premiere: false,
         rating: 0
-
+        ,
+        isFavorite: false
 
     },
     {
@@ -97,7 +100,8 @@ export const films = [
         inclusiveAdaptation: true,
         premiere: true,
         rating: 0
-
+        ,
+        isFavorite: false
 
 
 

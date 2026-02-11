@@ -8,7 +8,7 @@ export default function BlockFilm({ film }) {
     const navigate = useNavigate()
 
     const [rating, setRating] = useState(null)
-
+    const [isFav, setIsFav] = useState(film.isFavorite)
 
     function deleteMovie() {
         fetch(`http://localhost:3000/film/delete/${film.id}`, {
@@ -63,6 +63,38 @@ export default function BlockFilm({ film }) {
                                 }}
                             >
                                 ❌
+                            </button>
+
+                            <button
+                                onClick={() => {
+                                    fetch(`http://localhost:3000/films/${film.id}/favourite`, {
+                                        method: 'PATCH'
+                                    })
+                                        .then(res => {
+                                            if (res.ok) {
+                                                console.log('Успіно оновлено')
+                                                setIsFav(true)
+
+                                            }
+                                            else {
+                                                setIsFav(!isFav)
+
+
+                                            }
+                                        })
+
+                                        .catch(err => console.log(err))
+
+
+
+                                }}
+                            >
+
+
+
+                                {isFav ? "❤️" : "🤍"}
+
+
                             </button>
 
 
