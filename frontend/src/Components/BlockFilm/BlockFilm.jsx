@@ -23,6 +23,7 @@ export default function BlockFilm({ film }) {
             .catch(err => console.log(err));
     }
 
+
     return (
 
         <>
@@ -84,27 +85,15 @@ export default function BlockFilm({ film }) {
                                         })
 
                                         .catch(err => console.log(err))
-
-
-
                                 }}
                             >
-
-
-
                                 {isFav ? "❤️" : "🤍"}
-
-
                             </button>
-
-
-
 
                         </div>
                     </div>
 
                 </div>
-
 
                 <h1>{film.title}</h1>
             </div >

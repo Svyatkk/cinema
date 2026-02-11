@@ -7,23 +7,41 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    position: relative;
 
+}
 
+.sidebar {
+    position: absolute;
+    width: 450px;
+    height: 100%;
+    background-color: rgb(34, 31, 31);
+    z-index: 100;
+    left: -100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 80px;
+    transition: left 0.5s ease-in-out;
+}
+
+.sidebar.active {
+    left: 0;
 }
 
 nav>div:first-child {
     height: 100%;
     display: flex;
 
+
     gap: 20px;
 
 }
+
+
 
 nav>div:first-child img {
     width: 60px;
     height: 100%;
     margin-left: 5px;
-
 
 }
 
@@ -34,7 +52,7 @@ nav>div:first-child img {
     position: relative;
     cursor: pointer;
 
-
+    z-index: 101;
 
     transition: 1 ease;
 
@@ -49,8 +67,7 @@ nav>div:first-child img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease, opacity 0.2s ease;
-
+    transition: all 0.3s ease-in-out;
 
 }
 

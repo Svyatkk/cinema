@@ -25,11 +25,31 @@ function removeItemOnce(arr, value) {
 
 
 
-
 app.get('/films/favourites', (req, res) => {
     const filmFavourites = films.filter(film => film.isFavorite === true)
 
+
     res.json(filmFavourites)
+})
+
+app.get('/films/sortpage', (req, res) => {
+    const minpopularity = Number(req.query.minpopularity) || 0
+    const minageRating = Number(req.query.minageRating) || 0
+
+    const name = req.query.name || ""
+
+
+    const sortfilms = films.filter(film =>
+        film.popularity >= minpopularity &&
+        film.ageRating >= minageRating
+
+
+
+    )
+
+
+
+    res.json(sortfilms)
 })
 
 app.patch('/films/:id/favourite', (req, res) => {
@@ -38,18 +58,16 @@ app.patch('/films/:id/favourite', (req, res) => {
 
     const film = films.find(film => film.id === id);
 
-
     if (film) {
         film.isFavorite = !film.isFavorite;
         console.log(`Фільм ${film.title} тепер favorite: ${film.isFavorite}`);
+
         res.json(film)
     }
     else {
 
         res.sendStatus(404)
-
     }
-
 
 })
 

@@ -5,6 +5,7 @@ import FilmPage from "./Pages/FilmPage"
 import LoginPage from "./Pages/LoginPage"
 import ProfilePage from "./Pages/ProfilePag"
 import ShowFavourite from "./Pages/ShowFavourite"
+import FilterPage from "./Pages/Filterpage"
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login/:id" element={<ProfilePage />} />
 
           <Route path="/films/favourites" element={<ShowFavourite />} />
+          <Route path="/films/sortpage" element={<FilterPage />} />
 
 
 

@@ -2,7 +2,7 @@ export const films = [
     {
         id: 1,
         title: "Всі відтінки спокуси",
-        ageRating: "16+",
+        ageRating: 16,
         year: 2026,
         originalTitle: "All shades of temptation",
         director: "Ірина Громозда",
@@ -16,7 +16,9 @@ export const films = [
         premiere: true,
         filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg",
         rating: 0,
-        isFavorite: false
+        isFavorite: false,
+
+        popularity: 2
 
 
 
@@ -24,7 +26,7 @@ export const films = [
     {
         id: 2,
         title: "Довбуш",
-        ageRating: "16+",
+        ageRating: 16,
         year: 2023,
         originalTitle: "Dovbush",
         director: "Олесь Санін",
@@ -39,13 +41,14 @@ export const films = [
         rating: 0,
         isFavorite: false,
         filmPosterHref: "/images/dovbush.jpg",
+        popularity: 6
 
 
     },
     {
         id: 3,
         title: "Памфір",
-        ageRating: "16+",
+        ageRating: 16,
         year: 2022,
         originalTitle: "Pamfir",
         director: "Дмитро Сухолиткий-Собчук",
@@ -59,13 +62,14 @@ export const films = [
         premiere: false,
         rating: 0
         , isFavorite: false
+        , popularity: 2
 
 
     },
     {
         id: 4,
         title: "Люксембург, Люксембург",
-        ageRating: "12+",
+        ageRating: 12,
         year: 2022,
         originalTitle: "Luxembourg, Luxembourg",
         director: "Антоніо Лукіч",
@@ -79,13 +83,15 @@ export const films = [
         premiere: false,
         rating: 0
         ,
-        isFavorite: false
+        isFavorite: false,
+
+        popularity: 0
 
     },
     {
         id: 5,
         title: "Конотопська відьма",
-        ageRating: "18+",
+        ageRating: 18,
         year: 2024,
         originalTitle: "The Witch of Konotop",
         director: "Андрій Колесник",
@@ -99,9 +105,108 @@ export const films = [
         premiere: true,
         rating: 0
         ,
-        isFavorite: false
+        isFavorite: false,
+        popularity: 4
 
-
-
+    },
+    {
+        id: 6,
+        title: "Мавка. Лісова пісня",
+        ageRating: 0,
+        year: 2023,
+        originalTitle: "Mavka. The Forest Song",
+        director: "Олександра Рубан, Олег Маламуж",
+        language: "українська мова",
+        genre: ["Мультфільм", "Фентезі", "Сімейний"],
+        duration: "1:39",
+        production: "Україна",
+        studio: "Animagrad",
+        cast: ["Наталка Денисенко", "Артем Пивоваров", "Олена Кравець"],
+        inclusiveAdaptation: true,
+        premiere: false,
+        rating: 0,
+        isFavorite: false,
+        popularity: 10,
+        filmPosterHref: "/images/mavka.jpg"
+    },
+    {
+        id: 7,
+        title: "20 днів у Маріуполі",
+        ageRating: 18,
+        year: 2023,
+        originalTitle: "20 Days in Mariupol",
+        director: "Мстислав Чернов",
+        language: "українська мова, англійська мова",
+        genre: ["Документальний", "Військовий"],
+        duration: "1:35",
+        production: "Україна",
+        studio: "Associated Press, Frontline",
+        cast: ["Мстислав Чернов", "Євген Малолєтка", "Василіса Степаненко"],
+        inclusiveAdaptation: false,
+        premiere: false,
+        rating: 0,
+        isFavorite: false,
+        popularity: 9,
+        filmPosterHref: "/images/20days.jpg"
+    },
+    {
+        id: 8,
+        title: "Мої думки тихі",
+        ageRating: 12,
+        year: 2019,
+        originalTitle: "My Thoughts Are Silent",
+        director: "Антоніо Лукіч",
+        language: "українська мова",
+        genre: ["Комедія", "Драма"],
+        duration: "1:44",
+        production: "Україна",
+        studio: "Toy Cinema",
+        cast: ["Ірма Вітовська", "Андрій Лідаговський"],
+        inclusiveAdaptation: true,
+        premiere: false,
+        rating: 0,
+        isFavorite: false,
+        popularity: 8,
+        filmPosterHref: "/images/thoughts.jpg"
+    },
+    {
+        id: 9,
+        title: "Ля Палісіада",
+        ageRating: 16,
+        year: 2024,
+        originalTitle: "La Palisiada",
+        director: "Філіп Сотниченко",
+        language: "українська мова",
+        genre: ["Кримінальний", "Драма", "Нуар"],
+        duration: "1:40",
+        production: "Україна",
+        studio: "Viatel",
+        cast: ["Андрій Журба", "Новруз Пашаєв"],
+        inclusiveAdaptation: false,
+        premiere: true,
+        rating: 0,
+        isFavorite: false,
+        popularity: 3,
+        filmPosterHref: "/images/lapalisiada.jpg"
+    },
+    {
+        id: 10,
+        title: "Ти – Космос",
+        ageRating: 12,
+        year: 2024,
+        originalTitle: "U Are the Universe",
+        director: "Павло Остріков",
+        language: "українська мова",
+        genre: ["Фантастика", "Трагікомедія"],
+        duration: "1:41",
+        production: "Україна",
+        studio: "ForeFilms",
+        cast: ["Володимир Кравчук", "Леонід Попадько"],
+        inclusiveAdaptation: true,
+        premiere: true,
+        rating: 0,
+        isFavorite: false,
+        popularity: 7,
+        filmPosterHref: "/images/space.jpg"
     }
 ];

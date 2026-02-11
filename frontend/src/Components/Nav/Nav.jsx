@@ -7,19 +7,30 @@ export default function Nav() {
 
     const navigate = useNavigate()
 
+    const [showsidebar, setShowsidebar] = useState(false)
     const [ham, setHam] = useState(false)
+
 
     return (
         <>
+
+            <div className={`sidebar ${showsidebar ? "active" : ""}`}>
+
+
+
+
+            </div>
             <nav>
                 <div>
                     <div>
 
 
                         <div
-                            onClick={(e) => {
+                            onClick={() => {
+                                setShowsidebar(prev => !prev)
+
                                 setHam(prev => !prev)
-                                e.preventDefault()
+
 
                             }}
                             className={`ham-menu ${ham ? "active" : ""}`}
@@ -41,9 +52,9 @@ export default function Nav() {
 
 
                         <img src="src\Images\logo (2).png" alt="" />
-                    </div>
+                    </div >
 
-                </div>
+                </div >
 
 
                 <div>
@@ -81,7 +92,7 @@ export default function Nav() {
                     </div>
 
                 </div>
-            </nav>
+            </nav >
 
 
 
