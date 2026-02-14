@@ -6,17 +6,14 @@ import './FilterPage.css'
 export default function FilterPage() {
     const [films, setFilms] = useState([])
 
-    const [minPop, setMinPop] = useState(0)
-    const [minAge, setMinAge] = useState(0)
+
     const [name, setName] = useState('')
 
 
 
 
-
-
     const fetchFilms = () => {
-        const url = `http://localhost:3000/films/sortpage?minpopularity=${minPop}&minageRating=${minAge}&name=${name}`
+        const url = `http://localhost:3000/films/sortpage?name=${name}`
 
         console.log("Fetching:", url)
 
@@ -40,23 +37,6 @@ export default function FilterPage() {
             <div className="filters-sidebar">
                 <h3>Фільтри</h3>
 
-                <div className="filter-group">
-                    <label>Мін. Популярність:</label>
-                    <input
-                        type="number"
-                        value={minPop}
-                        onChange={(e) => setMinPop(e.target.value)}
-                    />
-                </div>
-
-                <div className="filter-group">
-                    <label>Мін. Вік:</label>
-                    <input
-                        type="number"
-                        value={minAge}
-                        onChange={(e) => setMinAge(e.target.value)}
-                    />
-                </div>
 
                 <label htmlFor="">
                     <input type="text" value={name} onChange={(e) => {

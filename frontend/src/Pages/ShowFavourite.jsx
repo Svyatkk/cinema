@@ -6,6 +6,8 @@ export default function ShowFavourite() {
 
 
 
+
+
     useEffect(() => {
         fetch('http://localhost:3000/films/favourites')
             .then(res => res.json())

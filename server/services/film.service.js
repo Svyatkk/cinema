@@ -32,3 +32,18 @@ export const deleteFilm = (id) => {
     return true
 }
 
+export const findByName = (name) => {
+
+    if (!name || name.trim() === "") {
+        return films
+    }
+
+    const search = name.toLowerCase()
+
+
+    return films.filter(film => {
+        if (!film.title) return false
+
+        return film.title.toLowerCase().includes(search)
+    })
+}

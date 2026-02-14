@@ -5,6 +5,8 @@ export const getAll = (req, res) => {
 }
 export const getFavourites = (req, res) => {
     res.json(filmService.getFavouriteFilms())
+
+
 }
 
 export const getById = (req, res) => {
@@ -17,6 +19,7 @@ export const getById = (req, res) => {
 
 export const rateFilm = (req, res) => {
     const film = filmService.rateFilm(Number(req.params.id), req.body.rating)
+
 
     if (!film) return res.sendStatus(404)
 
@@ -37,4 +40,19 @@ export const deleteFilm = (req, res) => {
     if (!success) return res.sendStatus(404)
 
     res.sendStatus(204)
+}
+
+export const findByName = (req, res) => {
+    try {
+        console.log("QUERY:", req.query)
+
+        const name = req.query.name || ""
+
+        const result = filmService.findByName(name)
+
+        res.json(result)
+    } catch (error) {
+        console.error("ERROR IN findByName:", error)
+        res.status(500).json({ message: "Internal server error" })
+    }
 }
