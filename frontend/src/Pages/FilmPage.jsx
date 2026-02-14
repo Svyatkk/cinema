@@ -19,7 +19,6 @@ export default function FilmPage() {
     if (!film) return <p>Завантаження...</p>
 
 
-
     return (
         <div>
             <h1>{film.title}</h1>
