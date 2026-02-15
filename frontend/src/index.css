@@ -45,6 +45,8 @@ body {
 
 .preremykach a {
 
+
+
   cursor: pointer;
 
   color: white;
@@ -60,4 +62,5 @@ body {
 .preremykach a.active {
   background-color: red;
 
+  cursor: pointer;
 }

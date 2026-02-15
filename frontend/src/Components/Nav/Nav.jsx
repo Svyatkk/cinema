@@ -23,15 +23,26 @@ export default function Nav() {
                         <img src="src\Images\logo (2).png" alt="" />
 
                     </div>
-                    <a href="">Переглянути обране</a>
                     <a
+
+                        onClick={() => {
+                            navigate('/films/favourites')
+                        }}
+                        href="">Переглянути обране</a>
+                    <a
+
+
 
 
                         onClick={() => {
                             navigate('/films/now')
                         }}
                     >Зраз у кіно </a>
-                    <a href="">Акції та знижки</a>
+                    <a
+
+
+
+                        href="">Акції та знижки</a>
                     <a href="">Допомога</a>
                     <a href="">Скоро в прокаті</a>
 
