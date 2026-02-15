@@ -3,6 +3,8 @@ import * as filmService from '../services/film.service.js'
 export const getAll = (req, res) => {
     res.json(filmService.getAllFilms())
 }
+
+
 export const getFavourites = (req, res) => {
     res.json(filmService.getFavouriteFilms())
 }
@@ -57,4 +59,20 @@ export const findByName = (req, res) => {
         console.error("ERROR IN findByName:", error)
         res.status(500).json({ message: "Internal server error" })
     }
+}
+
+
+export const getAllNowFilms = (req, res) => {
+    res.json(filmService.getAllNowFilms())
+
+
+
+}
+
+export const getAllSoonilms = (req, res) => {
+    res.json(filmService.getAllSoonFilms())
+
+
+
+
 }

@@ -12,8 +12,6 @@ export default function BlockFilm({ film }) {
 
 
 
-
-
     return (
 
         <>
@@ -43,9 +41,6 @@ export default function BlockFilm({ film }) {
                             <a href="" style={{ color: "red" }}>Прем'єра!</a>
                             <a href="">Квитки у продажу</a>
 
-
-
-
                             <button
                                 className='fav'
                                 onClick={() => {
@@ -55,13 +50,10 @@ export default function BlockFilm({ film }) {
                                         .then(res => {
                                             if (res.ok) {
                                                 console.log('Успіно оновлено')
-                                                setIsFav(true)
-
+                                                setIsFav(prev => !prev)
                                             }
                                             else {
-                                                setIsFav(!isFav)
-
-
+                                                setIsFav(prev => !prev)
                                             }
                                         })
 

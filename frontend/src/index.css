@@ -31,3 +31,33 @@ body {
   overflow: hidden;
   /* Прибирає подвійний скрол, якщо щось вилазить */
 }
+
+.preremykach {
+  border: 2px solid red;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+
+}
+
+.preremykach a {
+
+  cursor: pointer;
+
+  color: white;
+  font-size: 25px;
+  background-color: transparent;
+  border: 1px solid white;
+
+  padding: 20px 40px 20px 40px;
+
+
+}
+
+.preremykach a.active {
+  background-color: red;
+
+}

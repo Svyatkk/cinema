@@ -18,8 +18,23 @@ export default function Nav() {
             <div className={`sidebar ${showsidebar ? "active" : ""}`}>
 
                 <div className='block-buttons'>
-                    <img src="src\Images\logo (2).png" alt="" />
+
+                    <div className='logo-sidebar'>
+                        <img src="src\Images\logo (2).png" alt="" />
+
+                    </div>
                     <a href="">Переглянути обране</a>
+                    <a
+
+
+                        onClick={() => {
+                            navigate('/films/now')
+                        }}
+                    >Зраз у кіно </a>
+                    <a href="">Акції та знижки</a>
+                    <a href="">Допомога</a>
+                    <a href="">Скоро в прокаті</a>
+
 
                 </div>
             </div>

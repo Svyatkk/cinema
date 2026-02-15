@@ -20,7 +20,6 @@ export default function ShowFavourite() {
 
 
 
-
     return (
         <div style={{ padding: "20px", color: "white" }}>
             <h1>Мої улюблені фільми</h1>

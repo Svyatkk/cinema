@@ -4,6 +4,9 @@ import * as filmController from '../controllers/film.controllers.js'
 const router = Router()
 
 router.get('/', filmController.getAll)
+router.get('/now', filmController.getAllNowFilms)
+router.get('/soon', filmController.getAllSoonilms)
+
 router.get('/favourites', filmController.getFavourites)
 router.get('/sortpage', filmController.findByName)
 

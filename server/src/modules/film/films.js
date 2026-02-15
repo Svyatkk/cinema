@@ -17,10 +17,8 @@ export const films = [
         filmPosterHref: "/images/4b76c16304f79c6bbe9a64273ce86c54.jpeg",
         rating: 0,
         isFavorite: false,
-
-        popularity: 2
-
-
+        popularity: 2,
+        isSoon: true,
 
     },
     {
@@ -41,7 +39,10 @@ export const films = [
         rating: 0,
         isFavorite: false,
         filmPosterHref: "/images/dovbush.jpg",
-        popularity: 6
+        popularity: 6,
+
+        isSoon: false,
+
 
 
     },
@@ -62,7 +63,9 @@ export const films = [
         premiere: false,
         rating: 0
         , isFavorite: false
-        , popularity: 2
+        , popularity: 2,
+        isSoon: false
+
 
 
     },
@@ -85,7 +88,9 @@ export const films = [
         ,
         isFavorite: false,
 
-        popularity: 0
+        popularity: 0,
+        isSoon: true
+
 
     },
     {
@@ -106,7 +111,9 @@ export const films = [
         rating: 0
         ,
         isFavorite: false,
-        popularity: 4
+        popularity: 4,
+        isSoon: true
+
 
     },
     {
@@ -127,7 +134,9 @@ export const films = [
         rating: 0,
         isFavorite: false,
         popularity: 10,
-        filmPosterHref: "/images/mavka.jpg"
+        filmPosterHref: "/images/mavka.jpg",
+        isSoon: false
+
     },
     {
         id: 7,
@@ -147,7 +156,9 @@ export const films = [
         rating: 0,
         isFavorite: false,
         popularity: 9,
-        filmPosterHref: "/images/20days.jpg"
+        filmPosterHref: "/images/20days.jpg",
+        isSoon: false
+
     },
     {
         id: 8,
@@ -167,7 +178,9 @@ export const films = [
         rating: 0,
         isFavorite: false,
         popularity: 8,
-        filmPosterHref: "/images/thoughts.jpg"
+        filmPosterHref: "/images/thoughts.jpg",
+        isSoon: false
+
     },
     {
         id: 9,
@@ -187,7 +200,9 @@ export const films = [
         rating: 0,
         isFavorite: false,
         popularity: 3,
-        filmPosterHref: "/images/lapalisiada.jpg"
+        filmPosterHref: "/images/lapalisiada.jpg",
+        isSoon: false
+
     },
     {
         id: 10,
@@ -207,6 +222,10 @@ export const films = [
         rating: 0,
         isFavorite: false,
         popularity: 7,
-        filmPosterHref: "/images/space.jpg"
+        filmPosterHref: "/images/space.jpg",
+        isSoon: false
+
+
+
     }
 ];

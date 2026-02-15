@@ -2,6 +2,14 @@ import { films } from "../films.js"
 
 export const getAllFilms = () => films
 
+export const getAllNowFilms = () => {
+    return films.filter(film => film.isSoon === false)
+}
+
+export const getAllSoonFilms = () => {
+    return films.filter(film => film.isSoon === true)
+}
+
 export const getFavouriteFilms = () =>
     films.filter(f => f.isFavorite)
 
