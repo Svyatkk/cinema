@@ -11,27 +11,12 @@ export default function BlockFilm({ film }) {
     const [isFav, setIsFav] = useState(film.isFavorite)
 
 
-    function deleteMovie() {
-        fetch(`http://localhost:3000/film/delete/${film.id}`, {
-            method: 'DELETE',
-        })
-            .then(res => {
-                if (res.ok) {
-                    console.log("Фільм видалено");
-                    window.location.reload();
-                }
-            })
-            .catch(err => console.log(err));
-    }
+
 
 
     return (
 
-
         <>
-
-
-
             <div
                 className="blockFilm"
                 style={{ backgroundImage: `url(${film.filmPosterHref})` }}
@@ -58,16 +43,11 @@ export default function BlockFilm({ film }) {
                             <a href="" style={{ color: "red" }}>Прем'єра!</a>
                             <a href="">Квитки у продажу</a>
 
-                            <button
-                                onClick={() => {
-                                    deleteMovie()
 
-                                }}
-                            >
-                                ❌
-                            </button>
+
 
                             <button
+                                className='fav'
                                 onClick={() => {
                                     fetch(`http://localhost:3000/films/${film.id}/favourite`, {
                                         method: 'PATCH'

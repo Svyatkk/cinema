@@ -36,6 +36,8 @@ export default function ShowFavourite() {
                         onClick={() => {
 
 
+
+
                             fetch(`http://localhost:3000/films/${film.id}/favourite`, {
                                 method: 'PATCH'
                             })

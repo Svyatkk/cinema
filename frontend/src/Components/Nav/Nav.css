@@ -21,10 +21,48 @@ nav {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     padding-top: 80px;
     transition: left 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .sidebar.active {
     left: 0;
+}
+
+.sidebar .block-buttons {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.sidebar .block-buttons>a {
+    background-color: none;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.4s;
+
+}
+
+.sidebar .block-buttons>a:hover {
+    color: red;
+    transition: 0.4s;
+
+}
+
+.sidebar .block-buttons img {
+    height: 200px;
+    width: 200px;
+    border: 1px solid white;
+
+
 }
 
 nav>div:first-child {

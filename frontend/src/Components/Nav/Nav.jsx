@@ -11,14 +11,17 @@ export default function Nav() {
     const [ham, setHam] = useState(false)
 
 
+
     return (
         <>
 
             <div className={`sidebar ${showsidebar ? "active" : ""}`}>
 
+                <div className='block-buttons'>
+                    <img src="src\Images\logo (2).png" alt="" />
+                    <a href="">Переглянути обране</a>
 
-
-
+                </div>
             </div>
             <nav>
                 <div>

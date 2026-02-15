@@ -1,8 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 
-import filmRoutes from './routes/film.routes.js'
-
+import filmRoutes from './src/modules/film/routes/film.routes.js'
 
 
 const app = express()
@@ -10,6 +9,8 @@ const port = 3000
 
 app.use(cors())
 app.use(express.json())
+
+
 
 
 

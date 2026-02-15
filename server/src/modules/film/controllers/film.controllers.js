@@ -5,8 +5,6 @@ export const getAll = (req, res) => {
 }
 export const getFavourites = (req, res) => {
     res.json(filmService.getFavouriteFilms())
-
-
 }
 
 export const getById = (req, res) => {
@@ -39,8 +37,12 @@ export const deleteFilm = (req, res) => {
 
     if (!success) return res.sendStatus(404)
 
+
     res.sendStatus(204)
 }
+
+
+
 
 export const findByName = (req, res) => {
     try {
